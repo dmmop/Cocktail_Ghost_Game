@@ -45,7 +45,6 @@ object ghost {
 		println("===================================")
 		println("Tell me the first letter: ")
 		println("===================================")
-
 		while (flag < 0) {
 			// Check if is the first loop
 			if (flag == -1) {
@@ -57,7 +56,7 @@ object ghost {
 			word.append(scala.io.StdIn.readChar()) // Read char from terminal
 			val maybe = drinks.filter(col("name").startsWith(word.mkString)) // Possibilities
 
-			maybe.count() match {
+ 			maybe.count() match {
 				case 0 => flag = USER_LOST
 				case n =>
 					val pair = maybe.filter(_.getString(0).length % 2 == 0)
